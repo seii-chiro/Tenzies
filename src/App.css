@@ -4,11 +4,15 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 #root {
     display: grid;
     place-items: center;
     background-color: #0B2434;
-    height: 100vh;
+    height: 100%;
 }
 
 main {
@@ -17,27 +21,22 @@ main {
     width: 500px;
     background-color: #F5F5F5;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
 }
 
 .title {
-    position: absolute;
-    top: 50px;
     font-family: cursive;
 }
 
 .description {
-    position: absolute;
-    top: 98px;
     font-family: cursive;
 }
 
 .die-container {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    gap: 35px 20px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px 15px;
     padding: 20px;
     justify-content: space-between;
 }
@@ -58,10 +57,21 @@ main {
     font-family: fantasy;
 }
 
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.btn-container > button {
+    margin: 5px;
+}
+
 .reroll-btn {
-    position: absolute;
+    /* position: absolute;
     left: 260px;
-    top: 380px;
+    top: 380px; */
     border: none;
     background-color: #0047AB;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -74,9 +84,9 @@ main {
 }
 
 .restart-btn {
-    position: absolute;
+    /* position: absolute;
     left: 140px;
-    top: 380px;
+    top: 380px; */
     border: none;
     background-color: #0047AB;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -89,9 +99,9 @@ main {
 }
 
 .restart-btn-go {
-    position: absolute;
+    /* position: absolute;
     left: 200px;
-    top: 380px;
+    top: 380px; */
     border: none;
     background-color: #0047AB;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -110,5 +120,39 @@ main {
 .game-over {
     font-family: Permanent Marker;
     font-size: 60px;
+}
+
+@media (max-width: 520px) {
+    main {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 415px) {
+    main {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 380px) {
+    main {
+        height: 300px;
+        width: 300px;
+    }
+
+    .die-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 5px;
+        padding: 5px;
+        justify-content: space-between;
+    }
+
+    .die {
+        width: 50px;
+        height: 50px;
+    }
 }
 

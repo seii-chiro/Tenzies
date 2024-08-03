@@ -14,7 +14,7 @@ function App() {
     const allDiceAreHeld = dice.every(die => die.isHeld)
     const allValueAreSame = dice.every(die => die.value === firstValue)
 
-    if(allDiceAreHeld && allValueAreSame) {
+    if (allDiceAreHeld && allValueAreSame) {
       setTenzies(true)
       console.log("You won");
     }
@@ -72,7 +72,7 @@ function App() {
         {
           tenzies ?
             <>
-              <Confetti width={500} height={500}/>
+              <Confetti width={500} height={500} />
               <h2 className='game-over'>You won!</h2>
               <button className='restart-btn-go' onClick={restart}>New Game</button>
             </> :
@@ -82,8 +82,10 @@ function App() {
               <div className="die-container">
                 {diceElements}
               </div>
-              <button className='reroll-btn' onClick={rollDice}>Reroll</button>
-              <button className='restart-btn' onClick={restart}>Restart</button>
+              <div className="btn-container">
+                <button className='reroll-btn' onClick={rollDice}>Reroll</button>
+                <button className='restart-btn' onClick={restart}>Restart</button>
+              </div>
             </>
         }
       </main>
