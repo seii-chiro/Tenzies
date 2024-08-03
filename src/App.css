@@ -127,6 +127,14 @@ main {
         height: 350px;
         width: 350px;
     }
+
+    .die-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 5px;
+        padding: 5px;
+        justify-content: space-between;
+    }
 }
 
 @media (max-width: 380px) {
