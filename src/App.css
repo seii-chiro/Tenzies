@@ -30,7 +30,7 @@ main {
 }
 
 .description {
-    font-family: cursive;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     text-wrap: balance;
 }
