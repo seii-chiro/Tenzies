@@ -111,8 +111,9 @@ main {
 }
 
 .game-over {
+    text-align: center;
     font-family: Permanent Marker;
-    font-size: 10rem;
+    font-size: 3rem;
 }
 
 @media (max-width: 520px) {

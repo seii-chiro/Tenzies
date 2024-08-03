@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Die from './components/Die'
 import { nanoid } from 'nanoid'
-import Confetti from 'react-confetti'
 
 function App() {
 
@@ -72,7 +71,6 @@ function App() {
         {
           tenzies ?
             <>
-              <Confetti width={500} height={500} />
               <h2 className='game-over'>You won!</h2>
               <button className='restart-btn-go' onClick={restart}>New Game</button>
             </> :
